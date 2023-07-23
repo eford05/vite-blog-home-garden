@@ -8,6 +8,8 @@ const NewsModal = ({ show, toggle }) => {
     toggle: PropTypes.func,
   };
 
+  console.log(show);
+
   //disable scrolling when modal is active
   show
     ? (document.body.style.overflow = "hidden")
