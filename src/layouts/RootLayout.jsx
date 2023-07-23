@@ -10,7 +10,12 @@ const RootLayout = () => {
   return (
     <Fragment>
       <Navbar toggleModal={() => setShowModal(!showModal)} />
-      {showModal && <NewsModal toggleModal={() => setShowModal(!showModal)} />}
+      {showModal && (
+        <NewsModal
+          show={showModal}
+          toggleModal={() => setShowModal(!showModal)}
+        />
+      )}
       <Outlet />
       <Footer toggleModal={() => setShowModal(!showModal)} />
     </Fragment>
